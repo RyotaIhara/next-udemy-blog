@@ -15,17 +15,17 @@ export default function PostCard({ post }: PostCardProps) {
     <Card className="hover:shadow-lg transition-shadow h-full flex flex-col">
       <Link href={`/posts/${post.id}`} className="flex flex-col h-full">
         {post.topImage && (
-          <div className="w-full">
+          <div className="w-full flex justify-center my-4">
             <Image
               src={post.topImage}
               alt={post.title}
               width={600}
-              height={100} // ✅ 高さ明示、これで画像が確実に小さく
-              className="max-w w-auto h-[100px] object-cover rounded-t-lg"
+              height={100}
+              className="w-auto h-[250px] object-cover rounded-t-lg"
             />
           </div>
         )}
-        <CardHeader className="pb-2">
+        <CardHeader className="pt-2 pb-2">
           <CardTitle className="text-base font-semibold line-clamp-2">
             {post.title}
           </CardTitle>
