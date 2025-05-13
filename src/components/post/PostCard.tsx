@@ -14,7 +14,7 @@ export default function PostCard({post}: PostCardProps) {
   return (
     <div>
       <Card className="hover:shadow-lg transition-shadow">
-        <Link href="{`/posts/${post.id}`}">
+        <Link href={`/posts/${post.id}`}>
           {post.topImage && (
             <div className="relative w-full h-48">
               <Image 
@@ -38,12 +38,12 @@ export default function PostCard({post}: PostCardProps) {
             </p>
             <div className="flex items-center justify-between text-sm text-gray-500">
               <span>{post.author.name}</span>
-                    <time>{
-                    formatDistanceToNow(new Date(post.createdAt),{
-                        addSuffix: true,
-                        locale: ja 
-                    })}</time>
-                </div>
+                <time>{
+                formatDistanceToNow(new Date(post.createdAt),{
+                    addSuffix: true,
+                    locale: ja 
+                })}</time>
+              </div>
           </CardContent>
         </Link>
       </Card>
