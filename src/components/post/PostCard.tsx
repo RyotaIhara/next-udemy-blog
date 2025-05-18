@@ -13,7 +13,7 @@ import { PostCardProps } from '@/types/post'
 export default function PostCard({ post }: PostCardProps) {
   return (
     <Card className="hover:shadow-lg transition-shadow h-full flex flex-col">
-      <Link href={`/posts/${post.id}`} className="flex flex-col h-full">
+      <Link href={`/post/${post.id}`} className="flex flex-col h-full">
         {post.topImage && (
           <div className="w-full flex justify-center my-4">
             <Image
